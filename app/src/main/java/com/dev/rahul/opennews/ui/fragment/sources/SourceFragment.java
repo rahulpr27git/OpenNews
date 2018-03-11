@@ -13,7 +13,7 @@ import com.dev.rahul.opennews.ui.base.BaseFragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SourceFragment extends BaseFragment {
+public class SourceFragment extends BaseFragment implements SourceMVP.IView {
 
 
     public SourceFragment() {
