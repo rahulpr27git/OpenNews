@@ -8,6 +8,8 @@ import com.dev.rahul.opennews.pojo.Sources;
 
 import java.util.List;
 
+import io.reactivex.Single;
+
 /**
  * Created by rahul on 11/3/18.
  */
@@ -22,7 +24,7 @@ public interface SourceDao {
     int insert(List<Sources> list);
 
     @Query("SELECT * FROM sources")
-    List<Sources> getAllSources();
+    Single<List<Sources>> getAllSources();
 
     @Query(
             "SELECT * FROM sources " +
@@ -30,7 +32,7 @@ public interface SourceDao {
             "OR language = :language " +
             "OR category = :category"
     )
-    List<Sources> getSourcesByCountryOrLanguageOrCategory(String country, String language, String category);
+    Single<List<Sources>> getSourcesByCountryOrLanguageOrCategory(String country, String language, String category);
 
     @Query(
             "SELECT * FROM sources " +
@@ -38,5 +40,5 @@ public interface SourceDao {
             "AND language = :language " +
             "AND category = :category"
     )
-    List<Sources> getSourcesByCountryAndLanguageAndCategory(String country, String language, String category);
+    Single<List<Sources>> getSourcesByCountryAndLanguageAndCategory(String country, String language, String category);
 }

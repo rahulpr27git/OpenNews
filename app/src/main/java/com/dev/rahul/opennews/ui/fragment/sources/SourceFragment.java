@@ -16,10 +16,11 @@ import com.dev.rahul.opennews.ui.base.BaseFragment;
 public class SourceFragment extends BaseFragment implements SourceMVP.IView {
 
 
+    private SourcePresenter presenter;
+
     public SourceFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public int getLayoutRes() {

@@ -9,7 +9,31 @@ import java.util.List;
 public class Response {
 
     private String status = "";
-    private int totolResults = 0;
+    private int totalResults = 0;
 
     private List<Sources> sources;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getTotalResults() {
+        return totalResults;
+    }
+
+    public void setTotalResults(int totalResults) {
+        this.totalResults = totalResults;
+    }
+
+    public List<Sources> getSources() {
+        return sources;
+    }
+
+    public void setSources(List<Sources> sources) {
+        this.sources = sources;
+    }
 }

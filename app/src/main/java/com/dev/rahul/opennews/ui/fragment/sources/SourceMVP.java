@@ -1,10 +1,11 @@
 package com.dev.rahul.opennews.ui.fragment.sources;
 
 import com.dev.rahul.opennews.pojo.Response;
+import com.dev.rahul.opennews.pojo.Sources;
 import com.dev.rahul.opennews.ui.base.IBasePresenter;
 import com.dev.rahul.opennews.ui.base.IBaseView;
 
-import java.util.HashMap;
+import java.util.List;
 
 import io.reactivex.Single;
 
@@ -19,10 +20,13 @@ public interface SourceMVP {
     }
 
     interface IPresenter<V extends IView> extends IBasePresenter<V> {
-
+        void fetchSourcesFromLocal();
+        void fetchSourcesFromNetwork();
     }
 
     interface IRepository {
-        Single<Response> getSources(HashMap<String, String> queries);
+        Single<Response> getSourcesNetwork();
+        Single<List<Sources>> getSources(String country, String language, String category);
+        Single<List<Sources>> getSources();
     }
 }

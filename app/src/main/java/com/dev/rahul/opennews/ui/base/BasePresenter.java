@@ -18,7 +18,7 @@ public abstract class BasePresenter<V extends IBaseView> implements IBasePresent
         baseView = null;
     }
 
-    public V getBaseView() {
+    public V view() {
         return baseView;
     }
 }
