@@ -3,6 +3,7 @@ package com.dev.rahul.opennews.pojo;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by rahul on 4/3/18.
@@ -11,6 +12,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(tableName = "sources")
 public class Sources {
 
+    @NonNull
     @PrimaryKey
     @ColumnInfo
     private String id = "";

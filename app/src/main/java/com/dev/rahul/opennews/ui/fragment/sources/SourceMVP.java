@@ -16,7 +16,7 @@ import io.reactivex.Single;
 public interface SourceMVP {
 
     interface IView extends IBaseView {
-
+        void showSourceList(List<Sources> list);
     }
 
     interface IPresenter<V extends IView> extends IBasePresenter<V> {
@@ -28,5 +28,6 @@ public interface SourceMVP {
         Single<Response> getSourcesNetwork();
         Single<List<Sources>> getSources(String country, String language, String category);
         Single<List<Sources>> getSources();
+        void insertIntoSourceTable(List<Sources> list);
     }
 }

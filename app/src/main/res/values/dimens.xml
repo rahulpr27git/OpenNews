@@ -2,4 +2,17 @@
 <resources>
 
     <dimen name="tab_layout_height">40dp</dimen>
+
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="source_image_size">70dp</dimen>
+
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+
+
+    <dimen name="_18sp">18sp</dimen>
 </resources>

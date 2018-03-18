@@ -19,8 +19,7 @@ public class SourceRepository implements SourceMVP.IRepository {
     @Override
     public Single<Response> getSourcesNetwork() {
         return Retro.SERVICE.getNewsSource()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                .subscribeOn(Schedulers.io());
     }
 
     @Override
@@ -41,5 +40,12 @@ public class SourceRepository implements SourceMVP.IRepository {
                 .getAllSources()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public void insertIntoSourceTable(List<Sources> list) {
+        NewsApp.getDb()
+                .sourceDao()
+                .insert(list);
     }
 }

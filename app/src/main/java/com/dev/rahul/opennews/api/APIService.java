@@ -15,11 +15,11 @@ import retrofit2.http.QueryMap;
 
 public interface APIService {
 
-    @Headers("X-Api-Key : " + API.API_KEY)
+    @Headers("X-Api-Key:" + API.API_KEY)
     @GET(API.SOURCE)
     Single<Response> getNewsSource(@QueryMap Map<String,String> queries);
 
-    @Headers("X-Api-Key : " + API.API_KEY)
+    @Headers("X-Api-Key:" + API.API_KEY)
     @GET(API.SOURCE)
     Single<Response> getNewsSource();
 }

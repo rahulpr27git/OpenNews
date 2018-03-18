@@ -6,19 +6,19 @@ package com.dev.rahul.opennews.ui.base;
 
 public abstract class BasePresenter<V extends IBaseView> implements IBasePresenter<V> {
 
-    private V baseView;
+    private V view;
 
     @Override
-    public void onAttach(V baseView) {
-        this.baseView = baseView;
+    public void onAttach(V view) {
+        this.view = view;
     }
 
     @Override
     public void onDetach() {
-        baseView = null;
+        view = null;
     }
 
     public V view() {
-        return baseView;
+        return view;
     }
 }
